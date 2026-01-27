@@ -10,6 +10,11 @@
   font-weight: 400;
 }
 @font-face {
+  font-family: "Caveat";
+  src: url("../typography/Caveat-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
   font-family: "Poppins";
   src: url("../typography/Poppins-Regular.ttf") format("truetype");
   font-weight: 400;
@@ -154,6 +159,7 @@ section {
   line-height: 1.5;
   max-width: 900px;
   opacity: 0.8;
+  color: #a78d80;
 }
 
 @media screen and (max-width: 768px) {
@@ -189,7 +195,7 @@ section {
     gap: 1.5rem;
   }
   .nav .nav-desktop-links .nav-link:hover {
-    color: #8d7b6f;
+    color: #a78d80;
   }
 }
 .nav .social-links-desktop {
@@ -268,7 +274,7 @@ section {
 }
 .nav .nav-overlay .overlay-socials p {
   font-size: 0.9rem;
-  color: #8d7b6f;
+  color: #a78d80;
   margin-bottom: 1rem;
   text-transform: uppercase;
 }
@@ -446,75 +452,72 @@ section {
 .hero {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 1.5rem 1.5rem 0 1.5rem;
-  gap: 30px;
-  max-width: unset;
+  justify-content: center;
   width: 100%;
   min-height: 95dvh;
 }
 .hero .hero-content {
-  max-width: 800px;
+  max-width: 1000px;
   width: 100%;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  flex-grow: 1;
 }
-@media screen and (min-width: 768px) {
-  .hero .hero-content {
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-  }
+.hero .hero-visuals {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.hero .hero-info {
+.hero .hero-visuals .main-img {
+  width: 100%;
+  min-height: 85dvh;
+  object-fit: cover;
+  height: auto;
+  filter: brightness(0.9);
+}
+.hero .hero-visuals .hero-info {
+  padding: 1.5rem;
+  position: absolute;
+  z-index: 10;
+  width: 100%;
   text-align: center;
-  padding-top: 2rem;
+  padding: 1rem;
 }
 @media (min-width: 768px) {
-  .hero .hero-info {
+  .hero .hero-visuals .hero-info {
+    width: auto;
+    left: 20%;
     text-align: right;
-    padding-top: 0;
   }
 }
 .hero .hero-text .hero-title {
   font-family: "PlayfairDisplay", serif;
-  font-size: clamp(3.5rem, 7dvw, 5rem);
+  font-size: 5rem;
   color: #121212;
-  line-height: 1.1;
-  margin-bottom: 1.5rem;
+  line-height: 0.9;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
 }
 .hero .hero-text .hero-subtitle {
-  font-size: 1.15rem;
-  margin-bottom: 2.5rem;
-  opacity: 0.85;
-  letter-spacing: 0.5px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #121212;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 .hero .hero-cta {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  display: flex;
+  gap: 15px;
   justify-content: center;
-  align-items: center;
 }
 @media screen and (min-width: 768px) {
   .hero .hero-cta {
-    flex-direction: row;
-    justify-content: flex-end;
+    justify-content: flex-start;
   }
-}
-.hero .hero-visuals {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  width: 100%;
-  margin-top: 2rem;
-}
-.hero .hero-visuals .main-img {
-  max-width: 550px;
 }
 
 .collections-section .bento-grid {
@@ -578,6 +581,194 @@ section {
   .collections-section .item-horizontal {
     aspect-ratio: unset;
   }
+}
+
+.image-gallery {
+  width: 100%;
+  max-width: none;
+  margin-block: 2rem;
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(to bottom, transparent 0%, #121212, #121212, transparent 100%);
+}
+.image-gallery-container {
+  display: grid;
+  grid-template-rows: repeat(3, minmax(150px, auto));
+}
+.image-gallery-row {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(100px, 200px);
+  animation: slide-left 15s linear infinite;
+}
+@media (min-width: 700px) {
+  .image-gallery-row {
+    grid-auto-columns: minmax(150px, 250px);
+  }
+}
+.image-gallery-item {
+  width: 100%;
+  aspect-ratio: 2/3;
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeInColumn 15s ease-out infinite;
+}
+.image-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+.image-gallery-item:hover img {
+  transform: scale(1.3);
+}
+.image-gallery-item:nth-child(even) {
+  margin-top: -75%;
+}
+.image-gallery-item:nth-child(1) {
+  animation-delay: 0s;
+}
+.image-gallery-item:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.image-gallery-item:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.image-gallery-item:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.image-gallery-item:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.image-gallery-item:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.image-gallery-item:nth-child(7) {
+  animation-delay: 0.6s;
+}
+.image-gallery-item:nth-child(8) {
+  animation-delay: 0.7s;
+}
+.image-gallery-item:nth-child(9) {
+  animation-delay: 0.8s;
+}
+.image-gallery-item:nth-child(10) {
+  animation-delay: 0.9s;
+}
+
+@keyframes fadeInColumn {
+  from {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-10%);
+  }
+}
+.gift-section {
+  overflow: hidden;
+  margin-top: 80px;
+  background-color: #fdfbf9;
+  width: 100%;
+  max-width: none;
+}
+.gift-section .gift-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 60px;
+}
+@media (min-width: 768px) {
+  .gift-section .gift-container {
+    grid-template-columns: 0.8fr 1.2fr;
+  }
+}
+.gift-section .gift-visuals {
+  position: relative;
+  height: 350px;
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .gift-section .gift-visuals {
+    height: 450px;
+  }
+}
+.gift-section .polaroid-stack {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.gift-section .polaroid {
+  position: absolute;
+  background: white;
+  padding: 10px 10px 30px 10px;
+  box-shadow: 0px 10px 20px rgba(62, 44, 37, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  width: 160px;
+}
+@media (min-width: 768px) {
+  .gift-section .polaroid {
+    width: 220px;
+    padding: 15px 15px 40px 15px;
+  }
+}
+.gift-section .polaroid img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+.gift-section .polaroid .polaroid-caption {
+  font-family: "Caveat", cursive;
+  font-size: 1.2rem;
+  color: #121212;
+  margin-top: 15px;
+  text-align: center;
+  transform: rotate(-2deg);
+}
+.gift-section .polaroid:hover {
+  z-index: 50;
+  transform: scale(1.05) rotate(0deg) !important;
+}
+.gift-section .photo-1 {
+  top: 10%;
+  left: 10%;
+  transform: rotate(-8deg);
+}
+.gift-section .photo-2 {
+  top: 0%;
+  left: 40%;
+  transform: rotate(5deg);
+  z-index: 2;
+}
+.gift-section .photo-3 {
+  bottom: 2%;
+  left: 20%;
+  transform: rotate(-12deg);
+  z-index: 3;
+}
+.gift-section .photo-4 {
+  bottom: 10%;
+  right: 6%;
+  transform: rotate(18deg);
+  z-index: 2;
 }
 
 /*# sourceMappingURL=style.css.map */
