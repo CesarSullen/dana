@@ -1,0 +1,175 @@
+[
+	{
+		"id": 1,
+		"name": "Brazalete No. 1",
+		"category": "bracelets",
+		"price": "200.00",
+		"img": "./assets/products/bracelet-1.JPG"
+	},
+	{
+		"id": 2,
+		"name": "Brazalete No. 2",
+		"category": "bracelets",
+		"price": "200.00",
+		"img": "./assets/products/bracelet-2.JPG"
+	},
+	{
+		"id": 3,
+		"name": "Brazalete No. 3",
+		"category": "bracelets",
+		"price": "200.00",
+		"img": "./assets/products/bracelet-3.JPG"
+	},
+	{
+		"id": 4,
+		"name": "Brazalete No. 4",
+		"category": "bracelets",
+		"price": "200.00",
+		"img": "./assets/products/bracelet-4.JPG"
+	},
+	{
+		"id": 5,
+		"name": "Brazalete No. 5",
+		"category": "bracelets",
+		"price": "200.00",
+		"img": "./assets/products/bracelet-5.JPG"
+	},
+
+	{
+		"id": 6,
+		"name": "Colgante No. 1",
+		"category": "charms",
+		"price": "300.00",
+		"img": "./assets/products/charm-large-1.JPG"
+	},
+	{
+		"id": 7,
+		"name": "Colgante No. 2",
+		"category": "charms",
+		"price": "300.00",
+		"img": "./assets/products/charm-large-2.JPG"
+	},
+	{
+		"id": 8,
+		"name": "Colgante No. 3",
+		"category": "charms",
+		"price": "300.00",
+		"img": "./assets/products/charm-large-3.JPG"
+	},
+	{
+		"id": 9,
+		"name": "Colgante No. 4",
+		"category": "charms",
+		"price": "300.00",
+		"img": "./assets/products/charm-large-4.JPG"
+	},
+	{
+		"id": 10,
+		"name": "Colgante No. 5",
+		"category": "charms",
+		"price": "300.00",
+		"img": "./assets/products/charm-large-5.JPG"
+	},
+	{
+		"id": 11,
+		"name": "Colgante No. 6",
+		"category": "charms",
+		"price": "300.00",
+		"img": "./assets/products/charm-large-6.JPG"
+	},
+	{
+		"id": 12,
+		"name": "Colgante No. 7",
+		"category": "charms",
+		"price": "300.00",
+		"img": "./assets/products/charm-large-7.JPG"
+	},
+	{
+		"id": 13,
+		"name": "Colgante No. 8",
+		"category": "charms",
+		"price": "300.00",
+		"img": "./assets/products/charm-large-8.JPG"
+	},
+	{
+		"id": 14,
+		"name": "Colgante No. 9",
+		"category": "charms",
+		"price": "300.00",
+		"img": "./assets/products/charm-large-9.JPG"
+	},
+	{
+		"id": 15,
+		"name": "Colgante No. 10",
+		"category": "charms",
+		"price": "300.00",
+		"img": "./assets/products/charm-large-10.JPG"
+	},
+	{
+		"id": 16,
+		"name": "Colgante No. 11",
+		"category": "charms",
+		"price": "300.00",
+		"img": "./assets/products/charm-large-11.JPG"
+	},
+
+	{
+		"id": 17,
+		"name": "Colgante No. 12",
+		"category": "charms",
+		"price": "100.00",
+		"img": "./assets/products/charm-multy-1.JPG"
+	},
+	{
+		"id": 18,
+		"name": "Colgante No. 13",
+		"category": "charms",
+		"price": "300.00",
+		"img": "./assets/products/charm-multy-2.JPG"
+	},
+	{
+		"id": 19,
+		"name": "Colgante No. 14",
+		"category": "charms",
+		"price": "300.00",
+		"img": "./assets/products/charm-multy-3.JPG"
+	},
+
+	{
+		"id": 20,
+		"name": "Colgante No. 15",
+		"category": "charms",
+		"price": "150.00",
+		"img": "./assets/products/charm-small-1.JPG"
+	},
+	{
+		"id": 21,
+		"name": "Colgante No. 16",
+		"category": "charms",
+		"price": "150.00",
+		"img": "./assets/products/charm-small-2.JPG"
+	},
+
+	{
+		"id": 22,
+		"name": "Gargantilla No. 1",
+		"category": "chokers",
+		"price": "100.00",
+		"img": "./assets/products/choker-1.JPG"
+	},
+
+	{
+		"id": 23,
+		"name": "Collar No. 1",
+		"category": "necklaces",
+		"price": "100.00",
+		"img": "./assets/products/necklace-1.JPG"
+	},
+	{
+		"id": 24,
+		"name": "Collar No. 2",
+		"category": "necklaces",
+		"price": "100.00",
+		"img": "./assets/products/necklace-2.JPG"
+	}
+]

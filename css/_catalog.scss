@@ -1,0 +1,70 @@
+.catalog {
+	.section-header {
+		text-align: center;
+
+		.section-title {
+			font-size: clamp(2.5rem, 5dvw, 3.5rem);
+		}
+	}
+
+	.product-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+		gap: 30px;
+	}
+}
+
+.product-card {
+	background: #fdfbf9;
+	border-radius: 14px;
+	overflow: hidden;
+	border: 1px solid rgba(0, 0, 0, 0.03);
+	box-shadow: $shadow-soft;
+
+	&:hover {
+		transform: translateY(-5px);
+		box-shadow: $shadow-hard;
+	}
+
+	.product-image {
+		aspect-ratio: 1/1;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&:hover img {
+		transform: scale(1.08);
+	}
+
+	.product-details {
+		padding: 1.5rem;
+
+		.product-name {
+			font-family: "PlayfairDisplay", serif;
+			font-size: 1.2rem;
+			margin-bottom: 0.5rem;
+		}
+
+		.product-price {
+			color: $secondary-color;
+			font-weight: 600;
+			margin-bottom: 1.5rem;
+		}
+
+		.btn-product {
+			border: 1px solid $dark-color;
+			font-size: 0.9rem;
+			text-transform: uppercase;
+
+			&:hover {
+				background: $dark-color;
+				color: #fff;
+			}
+		}
+	}
+}

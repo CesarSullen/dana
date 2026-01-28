@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta property="og:title" content="D'ANA - Catálogo" />
+		<meta property="og:description" content="Mira todos los productos" />
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="./assets/opengraph.png" />
+		<link rel="icon" type="image/png" href="./assets/icons/logo.png" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="./assets/icons/logo.png"
+		/>
+		<link rel="stylesheet" href="./css/style.css" />
+
+		<title>Catálogo D'ANA</title>
+	</head>
+	<body id="body">
+		<main class="body-container">
+			<nav class="nav">
+				<a href="./index.html" class="nav-brand">
+					<span class="brand-name">D'ANA</span>
+				</a>
+
+				<div class="nav-desktop-links">
+					<a href="./catalog.html" class="nav-link">Colección</a>
+					<a href="./catalog.html?category=charms" class="nav-link"
+						>Colgantes</a
+					>
+					<a href="#" class="nav-link">Sobre mí</a>
+				</div>
+
+				<div class="nav-actions">
+					<div class="social-links-desktop">
+						<a href="https://wa.me/+5356826129"
+							><img src="./assets/icons/whatsapp-logo-fill.svg"
+						/></a>
+						<a href="https://instagram.com/daia_marlin"
+							><img src="./assets/icons/instagram-logo-fill.svg"
+						/></a>
+						<a href="https://facebook.com/dayana.marrero.1257"
+							><img src="./assets/icons/facebook-logo-fill.svg"
+						/></a>
+					</div>
+
+					<div class="nav-toggle" id="nav-toggle">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+
+				<div class="nav-overlay" id="nav-menu">
+					<div class="overlay-content">
+						<h2 class="overlay-title">Explorar</h2>
+						<div class="overlay-links">
+							<a href="./catalog.html" class="overlay-link">Colección</a>
+							<a href="./catalog.html?category=charms" class="overlay-link"
+								>Colgantes</a
+							>
+							<a href="#" class="overlay-link">Sobre mí</a>
+						</div>
+
+						<div class="overlay-socials">
+							<p>Sígueme en redes</p>
+							<div class="social-icons">
+								<a href="https://wa.me/+5356826129"
+									><img src="./assets/icons/whatsapp-logo-fill.svg"
+								/></a>
+								<a href="https://instagram.com/daia_marlin"
+									><img src="./assets/icons/instagram-logo-fill.svg"
+								/></a>
+								<a href="https://facebook.com/dayana.marrero.1257"
+									><img src="./assets/icons/facebook-logo-fill.svg"
+								/></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+
+			<section class="catalog">
+				<header class="section-header">
+					<h1 id="category-title" class="section-title">Cargando...</h1>
+					<p id="section-description">Explora nuestra selección</p>
+				</header>
+
+				<div id="product-grid" class="product-grid"></div>
+			</section>
+		</main>
+
+		<footer class="main-footer">
+			<div class="footer-container">
+				<div class="footer-brand">
+					<h1 class="brand-logo">D'ANA</h1>
+					<p class="brand-tagline">Detalles que cuentan tu historia.</p>
+				</div>
+
+				<div class="footer-links-grid">
+					<div class="footer-column">
+						<h4>Colección</h4>
+						<ul>
+							<li><a href="./catalog.html?category=charms">Colgantes</a></li>
+							<li><a href="./catalog.html?category=bracelets">Pulseras</a></li>
+							<li><a href="./catalog.html?category=necklaces">Collares</a></li>
+							<li>
+								<a href="./catalog.html?category=chokers">Gargantillas</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="footer-column">
+						<h4>Ayuda</h4>
+						<ul>
+							<li><a href="#">Envíos</a></li>
+							<li><a href="#">Cuidado de joyas</a></li>
+							<li><a href="tel:+5356826129">Llamar ahora</a></li>
+						</ul>
+					</div>
+
+					<div class="footer-column">
+						<h4>Social</h4>
+						<ul class="social-links">
+							<li>
+								<a href="https://wa.me/+5356826129"
+									><img
+										src="./assets/icons/whatsapp-logo-fill.svg"
+									/>Whatsapp</a
+								>
+							</li>
+
+							<li>
+								<a href="https://instagram.com/daia_marlin"
+									><img
+										src="./assets/icons/instagram-logo-fill.svg"
+									/>Instagram</a
+								>
+							</li>
+							<li>
+								<a href="https://facebook.com/dayana.marrero.1257"
+									><img
+										src="./assets/icons/facebook-logo-fill.svg"
+									/>Facebook</a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer-bottom">
+				<p class="copyright">© 2026 Accessorios D'ANA.</p>
+				<a href="https://SynthOcean.com" target="_blank" class="powered-by">
+					<img src="./assets/icons/so-white-color.svg" class="so-logo" />
+					<p>Powered by <strong>SynthOcean</strong>.</p>
+				</a>
+			</div>
+		</footer>
+		<script src="./js/catalog.js"></script>
+		<script src="./js/main.js"></script>
+	</body>
+</html>

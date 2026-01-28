@@ -92,6 +92,7 @@ svg {
   cursor: pointer;
   font-weight: 400;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 .btn .btn-icon {
   max-width: 20px;
@@ -268,7 +269,9 @@ section {
   right: 0;
 }
 .nav .nav-overlay .overlay-title {
+  font-family: "PlayfairDisplay";
   text-decoration: underline;
+  margin-bottom: 1rem;
 }
 .nav .nav-overlay .overlay-links {
   display: flex;
@@ -456,6 +459,164 @@ section {
     transform: translateX(calc(-50% - 10px));
   }
 }
+.main-footer {
+  background-color: #fdfbf9;
+  padding: 5rem 1.5rem 2rem 1.5rem;
+  width: 100%;
+}
+.main-footer .footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+@media (min-width: 768px) {
+  .main-footer .footer-container {
+    grid-template-columns: 0.4fr 0.6fr;
+  }
+}
+.main-footer .footer-brand .brand-logo {
+  font-family: "CinzelDecorative", serif;
+  font-size: 2.5rem;
+  color: #121212;
+  margin-bottom: 1rem;
+}
+.main-footer .footer-brand .brand-tagline {
+  font-size: 0.95rem;
+  color: #907a6e;
+  margin-bottom: 2rem;
+  max-width: 250px;
+}
+.main-footer .footer-links-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+@media (min-width: 480px) {
+  .main-footer .footer-links-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.main-footer .footer-links-grid h4 {
+  font-family: "PlayfairDisplay", serif;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #121212;
+}
+.main-footer .footer-links-grid ul {
+  list-style: none;
+  padding: 0;
+}
+.main-footer .footer-links-grid ul li {
+  margin-bottom: 0.8rem;
+}
+.main-footer .footer-links-grid ul li a {
+  text-decoration: none;
+  color: #121212;
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+.main-footer .footer-links-grid ul li a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+.main-footer .social-links a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.main-footer .social-links img {
+  width: 20px;
+  height: 20px;
+  transition: opacity 0.3s ease;
+}
+.main-footer .footer-bottom {
+  max-width: 1200px;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .main-footer .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.main-footer .footer-bottom .copyright {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+.main-footer .footer-bottom .powered-by {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.main-footer .footer-bottom .powered-by .so-logo {
+  width: 30px;
+}
+
+.catalog .section-header {
+  text-align: center;
+}
+.catalog .section-header .section-title {
+  font-size: clamp(2.5rem, 5dvw, 3.5rem);
+}
+.catalog .product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.product-card {
+  background: #fdfbf9;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  box-shadow: 0px 10px 20px rgba(62, 44, 37, 0.1);
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+.product-card .product-image {
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+.product-card .product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.product-card:hover img {
+  transform: scale(1.08);
+}
+.product-card .product-details {
+  padding: 1.5rem;
+}
+.product-card .product-details .product-name {
+  font-family: "PlayfairDisplay", serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.product-card .product-details .product-price {
+  color: #907a6e;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+.product-card .product-details .btn-product {
+  border: 1px solid #121212;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+.product-card .product-details .btn-product:hover {
+  background: #121212;
+  color: #fff;
+}
+
 .hero {
   display: flex;
   flex-direction: column;
@@ -479,28 +640,34 @@ section {
   align-items: center;
 }
 .hero .hero-visuals .main-img {
-  min-height: 60dvh;
+  min-height: 45dvh;
   height: auto;
   object-fit: cover;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 510px) {
   .hero .hero-visuals .main-img {
     min-height: 90dvh;
   }
 }
 .hero .hero-visuals .hero-info {
-  padding: 1.5rem;
   position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, 0%);
   z-index: 10;
-  width: 100%;
-  text-align: center;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 45dvh;
+  justify-content: space-between;
 }
-@media (min-width: 768px) {
+@media (min-width: 510px) {
   .hero .hero-visuals .hero-info {
     width: auto;
-    left: 20%;
-    text-align: right;
+    top: 25%;
+    left: 42%;
+    justify-content: center;
   }
 }
 .hero .hero-text {
@@ -528,15 +695,22 @@ section {
     transform: translateX(0%);
   }
   .hero .hero-text .hero-title span {
-    transform: translateX(40%);
+    transform: translateX(25%);
   }
 }
 .hero .hero-cta {
+  justify-content: center;
   display: flex;
   gap: 10px;
-  max-width: 35dvw;
   font-size: 0.9rem;
-  justify-content: flex-start;
+}
+@media screen and (min-width: 768px) {
+  .hero .hero-cta {
+    width: 100%;
+  }
+  .hero .hero-cta .btn {
+    min-width: 220px;
+  }
 }
 
 .collections-section .bento-grid {
@@ -563,7 +737,8 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  filter: brightness(0.85);
 }
 .collections-section .bento-item .item-overlay {
   position: absolute;
@@ -581,6 +756,7 @@ section {
 }
 .collections-section .bento-item:hover img {
   transform: scale(1.1) rotate(3deg);
+  filter: brightness(1);
 }
 .collections-section .item-large {
   grid-row: span 2;
@@ -703,6 +879,7 @@ section {
   background-color: #fdfbf9;
   width: 100%;
   max-width: none;
+  padding-block: 5rem;
 }
 .gift-section .section-header {
   text-align: left;
@@ -727,9 +904,8 @@ section {
   position: relative;
   height: 350px;
   display: flex;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 @media (min-width: 768px) {
   .gift-section .gift-visuals {
@@ -745,8 +921,8 @@ section {
   position: absolute;
   background: white;
   padding: 10px 10px 30px 10px;
-  box-shadow: 0px 10px 20px rgba(62, 44, 37, 0.1);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.04);
   width: 160px;
 }
 @media (min-width: 768px) {
@@ -759,43 +935,70 @@ section {
   width: 100%;
   aspect-ratio: 1/1;
   object-fit: cover;
+  display: block;
 }
 .gift-section .polaroid .polaroid-caption {
   font-family: "Caveat", cursive;
   font-size: 1.2rem;
-  color: #121212;
-  margin-top: 15px;
+  color: #333;
+  margin-top: 12px;
   text-align: center;
   transform: rotate(-2deg);
 }
+.gift-section .polaroid.photo-1 {
+  --default-rotation: -8deg;
+}
+.gift-section .polaroid.photo-2 {
+  --default-rotation: 5deg;
+}
+.gift-section .polaroid.photo-3 {
+  --default-rotation: -12deg;
+}
+.gift-section .polaroid.photo-4 {
+  --default-rotation: 18deg;
+}
 .gift-section .polaroid:hover {
-  z-index: 5;
-  transform: scale(1.05) rotate(0deg) !important;
+  z-index: 10;
+  animation: swingOutIn 0.8s ease-in-out forwards;
 }
 .gift-section .photo-1 {
   top: 10%;
   left: 10%;
-  transform: rotate(-8deg);
+  transform: rotate(var(--default-rotation));
 }
 .gift-section .photo-2 {
   top: 0%;
   left: 40%;
-  transform: rotate(5deg);
+  transform: rotate(var(--default-rotation));
   z-index: 2;
 }
 .gift-section .photo-3 {
   bottom: 2%;
   left: 20%;
-  transform: rotate(-12deg);
+  transform: rotate(var(--default-rotation));
   z-index: 3;
 }
 .gift-section .photo-4 {
   bottom: 10%;
   right: 6%;
-  transform: rotate(18deg);
+  transform: rotate(var(--default-rotation));
   z-index: 2;
 }
 
+@keyframes swingOutIn {
+  0% {
+    transform: rotate(var(--default-rotation)) scale(1) translate(0, 0);
+  }
+  35% {
+    transform: rotate(calc(var(--default-rotation) + 4deg)) scale(1.07) translate(18px, -55px);
+  }
+  75% {
+    transform: rotate(calc(var(--default-rotation) - 6deg)) scale(1.13) translate(-15px, -38px);
+  }
+  100% {
+    transform: scale(1.05) rotate(2deg) translate(0, 0);
+  }
+}
 .faq-section {
   max-width: 850px;
 }

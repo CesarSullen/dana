@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta property="og:title" content="D'ANA" />
-		<meta property="og:description" content="Made D'ANA" />
+		<meta property="og:description" content="Accesorios D'ANA" />
 		<meta property="og:type" content="website" />
 		<meta property="og:image" content="./assets/opengraph.png" />
 		<link rel="icon" type="image/png" href="./assets/icons/logo.png" />
@@ -20,23 +20,29 @@
 	<body id="body">
 		<main class="body-container">
 			<nav class="nav">
-				<div class="nav-brand">
+				<a href="./index.html" class="nav-brand">
 					<span class="brand-name">D'ANA</span>
-				</div>
+				</a>
 
 				<div class="nav-desktop-links">
-					<a href="#" class="nav-link">Colección</a>
-					<a href="#" class="nav-link">Colgantes</a>
+					<a href="./catalog.html" class="nav-link">Colección</a>
+					<a href="./catalog.html?category=charms" class="nav-link"
+						>Colgantes</a
+					>
 					<a href="#" class="nav-link">Sobre mí</a>
 				</div>
 
 				<div class="nav-actions">
 					<div class="social-links-desktop">
-						<a href="https://wa.me/555555555" target="_blank"
+						<a href="https://wa.me/+5356826129"
 							><img src="./assets/icons/whatsapp-logo-fill.svg"
 						/></a>
-						<a href="#"><img src="./assets/icons/instagram-logo-fill.svg" /></a>
-						<a href="#"><img src="./assets/icons/facebook-logo-fill.svg" /></a>
+						<a href="https://instagram.com/daia_marlin"
+							><img src="./assets/icons/instagram-logo-fill.svg"
+						/></a>
+						<a href="https://facebook.com/dayana.marrero.1257"
+							><img src="./assets/icons/facebook-logo-fill.svg"
+						/></a>
 					</div>
 
 					<div class="nav-toggle" id="nav-toggle">
@@ -50,21 +56,23 @@
 					<div class="overlay-content">
 						<h2 class="overlay-title">Explorar</h2>
 						<div class="overlay-links">
-							<a href="#" class="overlay-link">Colección</a>
-							<a href="#" class="overlay-link">Colgantes</a>
+							<a href="./catalog.html" class="overlay-link">Colección</a>
+							<a href="./catalog.html?category=charms" class="overlay-link"
+								>Colgantes</a
+							>
 							<a href="#" class="overlay-link">Sobre mí</a>
 						</div>
 
 						<div class="overlay-socials">
 							<p>Sígueme en redes</p>
 							<div class="social-icons">
-								<a href="https://wa.me/555555555"
+								<a href="https://wa.me/+5356826129"
 									><img src="./assets/icons/whatsapp-logo-fill.svg"
 								/></a>
-								<a href="#"
+								<a href="https://instagram.com/daia_marlin"
 									><img src="./assets/icons/instagram-logo-fill.svg"
 								/></a>
-								<a href="#"
+								<a href="https://facebook.com/dayana.marrero.1257"
 									><img src="./assets/icons/facebook-logo-fill.svg"
 								/></a>
 							</div>
@@ -87,8 +95,8 @@
 							</div>
 
 							<div class="hero-cta">
-								<a href="#" class="btn btn-primary">Colección</a>
-								<a href="#" class="btn ghost-btn">Contactar</a>
+								<a href="./catalog.html" class="btn btn-primary">Colección</a>
+								<a href="tel:+5356826129" class="btn ghost-btn">Contactar</a>
 							</div>
 						</div>
 					</div>
@@ -97,36 +105,45 @@
 
 			<section class="collections-section" id="coleccion">
 				<header class="section-header">
-					<h2 class="section-title">Explora la Colección</h2>
-					<p class="section-description">
-						Lorem ipsum dolor sit amet consectetur
-					</p>
+					<h2 class="section-title">Mi Catálogo</h2>
 				</header>
 
 				<div class="bento-grid">
-					<a href="#" class="bento-item item-large">
-						<img src="./assets/products/charm-multy-2.JPG" />
+					<a
+						href="./catalog.html?category=charms"
+						class="bento-item item-large"
+					>
+						<img src="./assets/products/charm-multy-2.JPG" alt="Colgantes" />
 						<div class="item-overlay">
-							<span>Colgantes Móvil</span>
+							<span>Colgantes</span>
 						</div>
 					</a>
 
-					<a href="#" class="bento-item item-stack">
-						<img src="./assets/products/wrist-1.JPG" />
+					<a
+						href="./catalog.html?category=bracelets"
+						class="bento-item item-stack"
+					>
+						<img src="./assets/products/bracelet-1.JPG" alt="Pulseras" />
 						<div class="item-overlay">
 							<span>Pulseras</span>
 						</div>
 					</a>
 
-					<a href="#" class="bento-item item-stack">
-						<img src="./assets/products/necklace-1.JPG" />
+					<a
+						href="./catalog.html?category=necklaces"
+						class="bento-item item-stack"
+					>
+						<img src="./assets/products/necklace-1.JPG" alt="Collares" />
 						<div class="item-overlay">
 							<span>Collares</span>
 						</div>
 					</a>
 
-					<a href="#" class="bento-item item-horizontal">
-						<img src="./assets/products/choker-1.JPG" />
+					<a
+						href="./catalog.html?category=chokers"
+						class="bento-item item-horizontal"
+					>
+						<img src="./assets/products/choker-1.JPG" alt="Gargantillas" />
 						<div class="item-overlay">
 							<span>Gargantillas</span>
 						</div>
@@ -145,7 +162,10 @@
 							/>
 						</div>
 						<div class="image-gallery-item">
-							<img src="./assets/products/wrist-1.JPG" alt="Wrist accessory" />
+							<img
+								src="./assets/products/bracelet-1.JPG"
+								alt="bracelet accessory"
+							/>
 						</div>
 						<div class="image-gallery-item">
 							<img
@@ -166,7 +186,10 @@
 							/>
 						</div>
 						<div class="image-gallery-item">
-							<img src="./assets/products/wrist-2.JPG" alt="Wrist accessory" />
+							<img
+								src="./assets/products/bracelet-2.JPG"
+								alt="bracelet accessory"
+							/>
 						</div>
 						<div class="image-gallery-item">
 							<img
@@ -181,7 +204,10 @@
 							/>
 						</div>
 						<div class="image-gallery-item">
-							<img src="./assets/products/wrist-3.JPG" alt="Wrist accessory" />
+							<img
+								src="./assets/products/bracelet-3.JPG"
+								alt="bracelet accessory"
+							/>
 						</div>
 						<div class="image-gallery-item">
 							<img
@@ -206,7 +232,10 @@
 							/>
 						</div>
 						<div class="image-gallery-item">
-							<img src="./assets/products/wrist-4.JPG" alt="Wrist accessory" />
+							<img
+								src="./assets/products/bracelet-4.JPG"
+								alt="bracelet accessory"
+							/>
 						</div>
 						<div class="image-gallery-item">
 							<img
@@ -227,7 +256,10 @@
 							/>
 						</div>
 						<div class="image-gallery-item">
-							<img src="./assets/products/wrist-5.JPG" alt="Wrist accessory" />
+							<img
+								src="./assets/products/bracelet-5.JPG"
+								alt="bracelet accessory"
+							/>
 						</div>
 						<div class="image-gallery-item">
 							<img
@@ -258,7 +290,10 @@
 							/>
 						</div>
 						<div class="image-gallery-item">
-							<img src="./assets/products/wrist-1.JPG" alt="Wrist accessory" />
+							<img
+								src="./assets/products/bracelet-1.JPG"
+								alt="bracelet accessory"
+							/>
 						</div>
 						<div class="image-gallery-item">
 							<img
@@ -279,7 +314,10 @@
 							/>
 						</div>
 						<div class="image-gallery-item">
-							<img src="./assets/products/wrist-2.JPG" alt="Wrist accessory" />
+							<img
+								src="./assets/products/bracelet-2.JPG"
+								alt="bracelet accessory"
+							/>
 						</div>
 						<div class="image-gallery-item">
 							<img
@@ -294,7 +332,10 @@
 							/>
 						</div>
 						<div class="image-gallery-item">
-							<img src="./assets/products/wrist-3.JPG" alt="Wrist accessory" />
+							<img
+								src="./assets/products/bracelet-3.JPG"
+								alt="bracelet accessory"
+							/>
 						</div>
 						<div class="image-gallery-item">
 							<img
@@ -316,7 +357,7 @@
 							personalidad. Gracias a su variedad de diseños, colores y
 							materiales, se adapta a todos los gustos y ocasiones.
 						</p>
-						<a href="https://wa.me/555555555" class="btn btn-primary"
+						<a href="https://wa.me/+5356826129" class="btn btn-primary"
 							>Encargar Regalo</a
 						>
 					</div>
@@ -324,12 +365,12 @@
 					<div class="gift-visuals">
 						<div class="polaroid-stack">
 							<div class="polaroid photo-1">
-								<img src="./assets/products/wrist-4.JPG" alt="Regalo 1" />
+								<img src="./assets/products/bracelet-4.JPG" alt="Regalo 1" />
 								<div class="polaroid-caption">Inspirado en tu gusto</div>
 							</div>
 
 							<div class="polaroid photo-2">
-								<img src="./assets/products/wrist-3.JPG" alt="Regalo 2" />
+								<img src="./assets/products/bracelet-3.JPG" alt="Regalo 2" />
 								<div class="polaroid-caption">Detalles que hablan de ti</div>
 							</div>
 
@@ -355,7 +396,7 @@
 				<div class="faq-container">
 					<div class="faq-item">
 						<div class="faq-header">
-							¿Se hacen accesorios personalizados?
+							¿Hacen accesorios personalizados?
 							<img
 								src="./assets/icons/caret-down-bold.svg"
 								alt=""
@@ -368,7 +409,7 @@
 					</div>
 					<div class="faq-item">
 						<div class="faq-header">
-							¿Se hacen entregas a domicilio?
+							¿Hacen entregas a domicilio?
 							<img
 								src="./assets/icons/caret-down-bold.svg"
 								alt=""
@@ -381,7 +422,7 @@
 					</div>
 					<div class="faq-item">
 						<div class="faq-header">
-							¿Se aceptan pagos en transferencia?
+							¿Aceptan pagos en transferencia?
 							<img
 								src="./assets/icons/caret-down-bold.svg"
 								alt=""
@@ -396,72 +437,58 @@
 			</section>
 		</main>
 
-		<!-- <footer class="main-footer">
+		<footer class="main-footer">
 			<div class="footer-container">
 				<div class="footer-brand">
-					<h1>fresha.</h1>
-					<a href="#" class="btn btn-primary">
-						Obtener la app
-						<img src="./assets/icons/app-store.svg" class="btn-icon" />
-						<img src="./assets/icons/play-store.svg" class="btn-icon" />
-					</a>
+					<h1 class="brand-logo">D'ANA</h1>
+					<p class="brand-tagline">Detalles que cuentan tu historia.</p>
 				</div>
 
 				<div class="footer-links-grid">
 					<div class="footer-column">
-						<h4>Acerca de Fresha</h4>
+						<h4>Colección</h4>
 						<ul>
-							<li><a href="#">Empleo</a></li>
-							<li><a href="#">Ayuda y servicio al cliente</a></li>
-							<li><a href="#">Blog</a></li>
-							<li><a href="#">Mapa del sitio</a></li>
+							<li><a href="./catalog.html?category=charms">Colgantes</a></li>
+							<li><a href="./catalog.html?category=bracelets">Pulseras</a></li>
+							<li><a href="./catalog.html?category=necklaces">Collares</a></li>
+							<li>
+								<a href="./catalog.html?category=chokers">Gargantillas</a>
+							</li>
 						</ul>
 					</div>
 
 					<div class="footer-column">
-						<h4>Para negocios</h4>
+						<h4>Ayuda</h4>
 						<ul>
-							<li><a href="#">Para Partners</a></li>
-							<li><a href="#">Precios</a></li>
-							<li><a href="#">Ayuda</a></li>
-							<li><a href="#">Estado</a></li>
+							<li><a href="#">Envíos</a></li>
+							<li><a href="#">Cuidado de joyas</a></li>
+							<li><a href="tel:+5356826129">Llamar ahora</a></li>
 						</ul>
 					</div>
 
 					<div class="footer-column">
-						<h4>Información legal</h4>
-						<ul>
-							<li><a href="#">Política de privacidad</a></li>
-							<li><a href="#">Condiciones del servicio</a></li>
-							<li><a href="#">Condiciones de uso</a></li>
-						</ul>
-					</div>
-
-					<div class="footer-column">
-						<h4>Síguenos en nuestras redes sociales</h4>
+						<h4>Social</h4>
 						<ul class="social-links">
 							<li>
-								<a href="#"
-									><img src="./assets/icons/arrow-up-right.svg" alt="" />
-									Facebook</a
+								<a href="https://wa.me/+5356826129"
+									><img
+										src="./assets/icons/whatsapp-logo-fill.svg"
+									/>Whatsapp</a
+								>
+							</li>
+
+							<li>
+								<a href="https://instagram.com/daia_marlin"
+									><img
+										src="./assets/icons/instagram-logo-fill.svg"
+									/>Instagram</a
 								>
 							</li>
 							<li>
-								<a href="#"
-									><img src="./assets/icons/arrow-up-right.svg" alt="" />
-									Twitter</a
-								>
-							</li>
-							<li>
-								<a href="#"
-									><img src="./assets/icons/arrow-up-right.svg" alt="" />
-									Linkedin</a
-								>
-							</li>
-							<li>
-								<a href="#"
-									><img src="./assets/icons/arrow-up-right.svg" alt="" />
-									Instagram</a
+								<a href="https://facebook.com/dayana.marrero.1257"
+									><img
+										src="./assets/icons/facebook-logo-fill.svg"
+									/>Facebook</a
 								>
 							</li>
 						</ul>
@@ -470,13 +497,13 @@
 			</div>
 
 			<div class="footer-bottom">
-				<div class="language-selector">
-					<img src="./assets/icons/globe-hemisphere-west.svg" alt="" />
-					<span>español (ES)</span>
-				</div>
-				<p class="copyright">© 2026 Fresha.com SV Ltd</p>
+				<p class="copyright">© 2026 Accessorios D'ANA.</p>
+				<a href="https://SynthOcean.com" target="_blank" class="powered-by">
+					<img src="./assets/icons/so-white-color.svg" class="so-logo" />
+					<p>Powered by <strong>SynthOcean</strong>.</p>
+				</a>
 			</div>
-		</footer> -->
+		</footer>
 		<script src="./js/main.js"></script>
 	</body>
 </html>

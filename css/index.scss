@@ -2,6 +2,7 @@
 @import "navbar";
 @import "animations";
 @import "footer";
+@import "catalog";
 
 // HERO SECTION
 .hero {
@@ -28,27 +29,35 @@
 		align-items: center;
 
 		.main-img {
-			min-height: 60dvh;
+			min-height: 45dvh;
 			height: auto;
 			object-fit: cover;
 
-			@media screen and (min-width: 768px) {
+			// This MQ must be at 510px because of the image bg
+			@media screen and (min-width: 510px) {
 				min-height: 90dvh;
 			}
 		}
 
 		.hero-info {
-			padding: 1.5rem;
 			position: absolute;
+			top: 30%;
+			left: 50%;
+			transform: translate(-50%, 0%);
 			z-index: 10;
-			width: 100%;
-			text-align: center;
 			padding: 1rem;
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			height: 45dvh;
+			justify-content: space-between;
 
-			@media (min-width: 768px) {
+			// This MQ must be at 510px because of the image bg
+			@media (min-width: 510px) {
 				width: auto;
-				left: 20%;
-				text-align: right;
+				top: 25%;
+				left: 42%;
+				justify-content: center;
 			}
 		}
 	}
@@ -78,18 +87,25 @@
 				transform: translateX(0%);
 
 				span {
-					transform: translateX(40%);
+					transform: translateX(25%);
 				}
 			}
 		}
 	}
 
 	.hero-cta {
+		justify-content: center;
 		display: flex;
 		gap: 10px;
-		max-width: 35dvw;
 		font-size: 0.9rem;
-		justify-content: flex-start;
+
+		@media screen and (min-width: 768px) {
+			width: 100%;
+
+			.btn {
+				min-width: 220px;
+			}
+		}
 	}
 }
 
@@ -119,7 +135,8 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+			transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+			filter: brightness(0.85);
 		}
 
 		.item-overlay {
@@ -140,6 +157,7 @@
 
 		&:hover img {
 			transform: scale(1.1) rotate(3deg);
+			filter: brightness(1);
 		}
 	}
 
@@ -256,6 +274,7 @@
 	background-color: #fdfbf9;
 	width: 100%;
 	max-width: none;
+	padding-block: 5rem;
 
 	.section-header {
 		text-align: left;
@@ -282,7 +301,8 @@
 		position: relative;
 		height: 350px;
 		display: flex;
-		@include flex-center;
+		align-items: center;
+		justify-content: center;
 
 		@media (min-width: 768px) {
 			height: 450px;
@@ -299,8 +319,8 @@
 		position: absolute;
 		background: white;
 		padding: 10px 10px 30px 10px;
-		box-shadow: $shadow-soft;
-		border: 1px solid rgba(0, 0, 0, 0.05);
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+		border: 1px solid rgba(0, 0, 0, 0.04);
 		width: 160px;
 
 		@media (min-width: 768px) {
@@ -310,50 +330,81 @@
 
 		img {
 			width: 100%;
-			aspect-ratio: 1/1;
+			aspect-ratio: 1 / 1;
 			object-fit: cover;
+			display: block;
 		}
 
 		.polaroid-caption {
 			font-family: "Caveat", cursive;
 			font-size: 1.2rem;
-			color: $dark-color;
-			margin-top: 15px;
+			color: #333;
+			margin-top: 12px;
 			text-align: center;
 			transform: rotate(-2deg);
 		}
 
+		&.photo-1 {
+			--default-rotation: -8deg;
+		}
+		&.photo-2 {
+			--default-rotation: 5deg;
+		}
+		&.photo-3 {
+			--default-rotation: -12deg;
+		}
+		&.photo-4 {
+			--default-rotation: 18deg;
+		}
+
 		&:hover {
-			z-index: 5;
-			transform: scale(1.05) rotate(0deg) !important;
+			z-index: 10;
+			animation: swingOutIn 0.8s ease-in-out forwards;
 		}
 	}
 
 	.photo-1 {
 		top: 10%;
 		left: 10%;
-		transform: rotate(-8deg);
+		transform: rotate(var(--default-rotation));
 	}
 
 	.photo-2 {
 		top: 0%;
 		left: 40%;
-		transform: rotate(5deg);
+		transform: rotate(var(--default-rotation));
 		z-index: 2;
 	}
 
 	.photo-3 {
 		bottom: 2%;
 		left: 20%;
-		transform: rotate(-12deg);
+		transform: rotate(var(--default-rotation));
 		z-index: 3;
 	}
 
 	.photo-4 {
 		bottom: 10%;
 		right: 6%;
-		transform: rotate(18deg);
+		transform: rotate(var(--default-rotation));
 		z-index: 2;
+	}
+}
+
+@keyframes swingOutIn {
+	0% {
+		transform: rotate(var(--default-rotation)) scale(1) translate(0, 0);
+	}
+	35% {
+		transform: rotate(calc(var(--default-rotation) + 4deg)) scale(1.07)
+			translate(18px, -55px);
+	}
+	75% {
+		transform: rotate(calc(var(--default-rotation) - 6deg)) scale(1.13)
+			translate(-15px, -38px);
+	}
+	100% {
+		transform: scale(1.05) rotate(2deg) translate(0, 0);
 	}
 }
 
