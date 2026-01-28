@@ -10,6 +10,11 @@
   font-weight: 400;
 }
 @font-face {
+  font-family: "CinzelDecorative";
+  src: url("../typography/CinzelDecorative-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
   font-family: "Caveat";
   src: url("../typography/Caveat-Regular.ttf") format("truetype");
   font-weight: 400;
@@ -100,7 +105,7 @@ svg {
   background-color: #3e2c25;
   color: #f9f7f4;
   border: solid 2px #3e2c25;
-  box-shadow: 0px 10px 20px rgba(62, 44, 37, 0.3);
+  box-shadow: 0px 10px 20px rgba(62, 44, 37, 0.1);
 }
 .btn.btn-primary:hover {
   transform: translateY(-5px);
@@ -159,7 +164,7 @@ section {
   line-height: 1.5;
   max-width: 900px;
   opacity: 0.8;
-  color: #a78d80;
+  color: #907a6e;
 }
 
 @media screen and (max-width: 768px) {
@@ -180,11 +185,13 @@ section {
   background-color: #f9f7f4;
 }
 .nav .brand-name {
-  font-family: "PlayfairDisplay", serif;
+  font-family: "CinzelDecorative", serif;
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 3px;
   color: #121212;
+  position: relative;
+  z-index: 1000;
 }
 .nav .nav-desktop-links {
   display: none;
@@ -195,7 +202,7 @@ section {
     gap: 1.5rem;
   }
   .nav .nav-desktop-links .nav-link:hover {
-    color: #a78d80;
+    color: #907a6e;
   }
 }
 .nav .social-links-desktop {
@@ -274,7 +281,7 @@ section {
 }
 .nav .nav-overlay .overlay-socials p {
   font-size: 0.9rem;
-  color: #a78d80;
+  color: #907a6e;
   margin-bottom: 1rem;
   text-transform: uppercase;
 }
@@ -472,11 +479,14 @@ section {
   align-items: center;
 }
 .hero .hero-visuals .main-img {
-  width: 100%;
-  min-height: 85dvh;
-  object-fit: cover;
+  min-height: 60dvh;
   height: auto;
-  filter: brightness(0.9);
+  object-fit: cover;
+}
+@media screen and (min-width: 768px) {
+  .hero .hero-visuals .main-img {
+    min-height: 90dvh;
+  }
 }
 .hero .hero-visuals .hero-info {
   padding: 1.5rem;
@@ -493,31 +503,40 @@ section {
     text-align: right;
   }
 }
+.hero .hero-text {
+  text-align: left;
+}
 .hero .hero-text .hero-title {
   font-family: "PlayfairDisplay", serif;
-  font-size: 5rem;
+  font-size: clamp(2.7rem, 5dvw, 5rem);
   color: #121212;
   line-height: 0.9;
   margin-bottom: 1rem;
   text-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+  font-weight: 400;
+  line-height: 1.1;
+  text-align: center;
+  transform: translateX(-20%);
 }
-.hero .hero-text .hero-subtitle {
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
-  color: #121212;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+.hero .hero-text .hero-title span {
+  font-family: "CinzelDecorative", serif;
+  transform: translateX(20%);
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .hero .hero-text .hero-title {
+    transform: translateX(0%);
+  }
+  .hero .hero-text .hero-title span {
+    transform: translateX(40%);
+  }
 }
 .hero .hero-cta {
   display: flex;
-  gap: 15px;
-  justify-content: center;
-}
-@media screen and (min-width: 768px) {
-  .hero .hero-cta {
-    justify-content: flex-start;
-  }
+  gap: 10px;
+  max-width: 35dvw;
+  font-size: 0.9rem;
+  justify-content: flex-start;
 }
 
 .collections-section .bento-grid {
@@ -561,7 +580,7 @@ section {
   letter-spacing: 1px;
 }
 .collections-section .bento-item:hover img {
-  transform: scale(1.08);
+  transform: scale(1.1) rotate(3deg);
 }
 .collections-section .item-large {
   grid-row: span 2;
@@ -685,6 +704,12 @@ section {
   width: 100%;
   max-width: none;
 }
+.gift-section .section-header {
+  text-align: left;
+}
+.gift-section .btn {
+  max-width: fit-content;
+}
 .gift-section .gift-container {
   max-width: 900px;
   margin: 0 auto;
@@ -720,7 +745,7 @@ section {
   position: absolute;
   background: white;
   padding: 10px 10px 30px 10px;
-  box-shadow: 0px 10px 20px rgba(62, 44, 37, 0.3);
+  box-shadow: 0px 10px 20px rgba(62, 44, 37, 0.1);
   border: 1px solid rgba(0, 0, 0, 0.05);
   width: 160px;
 }
@@ -744,7 +769,7 @@ section {
   transform: rotate(-2deg);
 }
 .gift-section .polaroid:hover {
-  z-index: 50;
+  z-index: 5;
   transform: scale(1.05) rotate(0deg) !important;
 }
 .gift-section .photo-1 {
@@ -769,6 +794,54 @@ section {
   right: 6%;
   transform: rotate(18deg);
   z-index: 2;
+}
+
+.faq-section {
+  max-width: 850px;
+}
+.faq-section .section-title {
+  text-align: center;
+}
+.faq-section .faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.faq-section .faq-item {
+  border-radius: 20px;
+  background-color: #fdfbf9;
+  box-shadow: 0px 10px 20px rgba(62, 44, 37, 0.1);
+  cursor: pointer;
+}
+.faq-section .faq-item .faq-header {
+  padding: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+.faq-section .faq-item .faq-header .faq-icon {
+  width: 25px;
+}
+.faq-section .faq-item .faq-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  color: #907a6e;
+  transition: max-height 0.3s ease-in, opacity 0.2s ease-in-out;
+}
+.faq-section .faq-item .faq-content p {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  line-height: 1.6;
+}
+.faq-section .faq-item.active .faq-icon {
+  transform: rotate(45deg);
+}
+.faq-section .faq-item.active .faq-content {
+  max-height: 100px;
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

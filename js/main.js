@@ -21,3 +21,12 @@ navLinks.forEach((link) => {
 		document.body.style.overflow = "auto";
 	});
 });
+
+// Accordion
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach((item) => {
+	item.addEventListener("click", () => {
+		item.classList.toggle("active");
+	});
+});

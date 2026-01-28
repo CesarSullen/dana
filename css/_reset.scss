@@ -2,14 +2,14 @@
    VARIABLES 
 ===================== */
 $primary-color: #3e2c25;
-$secondary-color: #a78d80;
+$secondary-color: #907a6e;
 $light-color: #f9f7f4;
 $dark-color: #121212;
 
 $border-soft: solid 0.5px rgba(0, 0, 0, 0.1);
 $border-radius-general: 20px;
 $border-radius-rounded: 100dvh;
-$shadow-soft: 0px 10px 20px rgba(62, 44, 37, 0.3);
+$shadow-soft: 0px 10px 20px rgba(62, 44, 37, 0.1);
 $shadow-hard: 0 15px 40px rgba(0, 0, 0, 0.25);
 
 /* =====================
@@ -18,6 +18,11 @@ $shadow-hard: 0 15px 40px rgba(0, 0, 0, 0.25);
 @font-face {
 	font-family: "PlayfairDisplay";
 	src: url("../typography/PlayfairDisplay-Regular.ttf") format("truetype");
+	font-weight: 400;
+}
+@font-face {
+	font-family: "CinzelDecorative";
+	src: url("../typography/CinzelDecorative-Regular.ttf") format("truetype");
 	font-weight: 400;
 }
 @font-face {
