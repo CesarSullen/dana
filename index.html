@@ -7,12 +7,8 @@
 		<meta property="og:description" content="Accesorios D'ANA" />
 		<meta property="og:type" content="website" />
 		<meta property="og:image" content="./assets/opengraph.png" />
-		<link rel="icon" type="image/png" href="./assets/icons/logo.png" />
-		<link
-			rel="apple-touch-icon"
-			sizes="180x180"
-			href="./assets/icons/logo.png"
-		/>
+		<link rel="icon" type="image/png" href="./assets/logo.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/logo.png" />
 		<link rel="stylesheet" href="./css/style.css" />
 
 		<title>D'ANA</title>
@@ -20,16 +16,15 @@
 	<body id="body">
 		<main class="body-container">
 			<nav class="nav">
-				<a href="./index.html" class="nav-brand">
+				<a href="./" class="nav-brand">
 					<span class="brand-name">D'ANA</span>
 				</a>
-
 				<div class="nav-desktop-links">
-					<a href="./catalog.html" class="nav-link">Colección</a>
-					<a href="./catalog.html?category=charms" class="nav-link"
+					<a href="./" class="nav-link magic-effect">Inicio</a>
+					<a href="./catalog.html" class="nav-link magic-effect">Colección</a>
+					<a href="./catalog.html?category=charms" class="nav-link magic-effect"
 						>Colgantes</a
 					>
-					<a href="#" class="nav-link">Sobre mí</a>
 				</div>
 
 				<div class="nav-actions">
@@ -56,11 +51,11 @@
 					<div class="overlay-content">
 						<h2 class="overlay-title">Explorar</h2>
 						<div class="overlay-links">
+							<a href="./" class="nav-link magic-effect">Inicio</a>
 							<a href="./catalog.html" class="overlay-link">Colección</a>
 							<a href="./catalog.html?category=charms" class="overlay-link"
 								>Colgantes</a
 							>
-							<a href="#" class="overlay-link">Sobre mí</a>
 						</div>
 
 						<div class="overlay-socials">
@@ -83,18 +78,19 @@
 
 			<header class="hero">
 				<div class="hero-content">
+					<img src="./assets/wave.png" class="wave-decoration" />
 					<div class="hero-visuals">
 						<img src="./assets/hero-img.png" class="main-img" />
 
 						<div class="hero-info">
-							<div class="hero-text">
+							<div class="hero-text show-up">
 								<h1 class="hero-title">
 									Accesorios <br />
 									<span>D'ANA</span>
 								</h1>
 							</div>
 
-							<div class="hero-cta">
+							<div class="hero-cta show-up">
 								<a href="./catalog.html" class="btn btn-primary">Colección</a>
 								<a href="tel:+5356826129" class="btn ghost-btn">Contactar</a>
 							</div>
@@ -105,13 +101,13 @@
 
 			<section class="collections-section" id="coleccion">
 				<header class="section-header">
-					<h2 class="section-title">Mi Catálogo</h2>
+					<h2 class="section-title show-up">Mi Catálogo</h2>
 				</header>
 
 				<div class="bento-grid">
 					<a
 						href="./catalog.html?category=charms"
-						class="bento-item item-large"
+						class="bento-item item-large bounce-in"
 					>
 						<img src="./assets/products/charm-multy-2.JPG" alt="Colgantes" />
 						<div class="item-overlay">
@@ -121,7 +117,7 @@
 
 					<a
 						href="./catalog.html?category=bracelets"
-						class="bento-item item-stack"
+						class="bento-item item-stack bounce-in"
 					>
 						<img src="./assets/products/bracelet-1.JPG" alt="Pulseras" />
 						<div class="item-overlay">
@@ -131,7 +127,7 @@
 
 					<a
 						href="./catalog.html?category=necklaces"
-						class="bento-item item-stack"
+						class="bento-item item-stack bounce-in"
 					>
 						<img src="./assets/products/necklace-1.JPG" alt="Collares" />
 						<div class="item-overlay">
@@ -141,7 +137,7 @@
 
 					<a
 						href="./catalog.html?category=chokers"
-						class="bento-item item-horizontal"
+						class="bento-item item-horizontal bounce-in"
 					>
 						<img src="./assets/products/choker-1.JPG" alt="Gargantillas" />
 						<div class="item-overlay">
@@ -350,20 +346,20 @@
 			<section class="gift-section">
 				<div class="gift-container">
 					<div class="section-header">
-						<h1 class="section-title">El regalo perfecto</h1>
-						<p class="section-description">
+						<h1 class="section-title show-up">El regalo perfecto</h1>
+						<p class="section-description show-up">
 							Un accesorio de bisutería es un regalo ideal por ser bonito,
 							versátil y accesible. Además, es una forma de expresar estilo y
 							personalidad. Gracias a su variedad de diseños, colores y
 							materiales, se adapta a todos los gustos y ocasiones.
 						</p>
-						<a href="https://wa.me/+5356826129" class="btn btn-primary"
+						<a href="https://wa.me/+5356826129" class="btn btn-primary show-up"
 							>Encargar Regalo</a
 						>
 					</div>
 
 					<div class="gift-visuals">
-						<div class="polaroid-stack">
+						<div class="polaroid-stack rotate-left">
 							<div class="polaroid photo-1">
 								<img src="./assets/products/bracelet-4.JPG" alt="Regalo 1" />
 								<div class="polaroid-caption">Inspirado en tu gusto</div>
@@ -390,11 +386,11 @@
 
 			<section class="faq-section">
 				<div class="section-header">
-					<h2 class="section-title">Preguntas frecuentes</h2>
+					<h2 class="section-title show-up">Preguntas frecuentes</h2>
 				</div>
 
 				<div class="faq-container">
-					<div class="faq-item">
+					<div class="faq-item show-up">
 						<div class="faq-header">
 							¿Hacen accesorios personalizados?
 							<img
@@ -407,7 +403,7 @@
 							<p>Sí, siempre y cuando estén disponibles los materiales.</p>
 						</div>
 					</div>
-					<div class="faq-item">
+					<div class="faq-item show-up">
 						<div class="faq-header">
 							¿Hacen entregas a domicilio?
 							<img
@@ -420,7 +416,7 @@
 							<p>Sí, el costo estará en dependencia del lugar.</p>
 						</div>
 					</div>
-					<div class="faq-item">
+					<div class="faq-item show-up">
 						<div class="faq-header">
 							¿Aceptan pagos en transferencia?
 							<img

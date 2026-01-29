@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* =====================
    VARIABLES 
 ===================== */
@@ -183,27 +184,25 @@ section {
   top: 0;
   width: 100%;
   z-index: 1000;
-  background-color: #f9f7f4;
+  background: transparent;
 }
 .nav .brand-name {
   font-family: "CinzelDecorative", serif;
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 3px;
-  color: #121212;
+  color: #907a6e;
   position: relative;
   z-index: 1000;
 }
 .nav .nav-desktop-links {
   display: none;
+  color: #907a6e;
 }
 @media screen and (min-width: 768px) {
   .nav .nav-desktop-links {
     display: flex;
     gap: 1.5rem;
-  }
-  .nav .nav-desktop-links .nav-link:hover {
-    color: #907a6e;
   }
 }
 .nav .social-links-desktop {
@@ -241,7 +240,7 @@ section {
   display: block;
   width: 100%;
   height: 2px;
-  background-color: #121212;
+  background-color: #907a6e;
 }
 .nav .nav-toggle.active span:nth-child(1) {
   transform: rotate(45deg) translate(8px, 5px);
@@ -295,6 +294,38 @@ section {
 }
 .nav .nav-overlay .overlay-socials .social-icons img {
   width: 32px;
+}
+
+.magic-effect {
+  position: relative;
+}
+.magic-effect::after, .magic-effect::before {
+  content: "✦";
+  font-size: 2rem;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+.magic-effect:hover::before, .magic-effect:active::before {
+  opacity: 1;
+  top: -30px;
+  left: -30px;
+  bottom: unset;
+  right: unset;
+  transform: rotate(360deg);
+}
+.magic-effect:hover::after, .magic-effect:active::after {
+  opacity: 1;
+  top: unset;
+  left: unset;
+  bottom: -30px;
+  right: -30px;
+  transform: rotate(360deg);
 }
 
 .show-up,
@@ -451,14 +482,6 @@ section {
     transform: translateY(0px);
   }
 }
-@keyframes scrollInfinite {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-50% - 10px));
-  }
-}
 .main-footer {
   background-color: #fdfbf9;
   padding: 5rem 1.5rem 2rem 1.5rem;
@@ -515,7 +538,7 @@ section {
   text-decoration: none;
   color: #121212;
   font-size: 0.9rem;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 .main-footer .footer-links-grid ul li a:hover {
   opacity: 1;
@@ -632,6 +655,17 @@ section {
   justify-content: center;
   align-items: center;
 }
+.hero .hero-content .wave-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+}
+@media screen and (min-width: 512px) {
+  .hero .hero-content .wave-decoration {
+    max-width: 62%;
+  }
+}
 .hero .hero-visuals {
   position: relative;
   width: 100%;
@@ -643,8 +677,9 @@ section {
   min-height: 45dvh;
   height: auto;
   object-fit: cover;
+  pointer-events: none;
 }
-@media screen and (min-width: 510px) {
+@media screen and (min-width: 512px) {
   .hero .hero-visuals .main-img {
     min-height: 90dvh;
   }
@@ -662,7 +697,7 @@ section {
   height: 45dvh;
   justify-content: space-between;
 }
-@media (min-width: 510px) {
+@media (min-width: 512px) {
   .hero .hero-visuals .hero-info {
     width: auto;
     top: 25%;
@@ -920,7 +955,7 @@ section {
 .gift-section .polaroid {
   position: absolute;
   background: white;
-  padding: 10px 10px 30px 10px;
+  padding: 10px 10px 20px 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(0, 0, 0, 0.04);
   width: 160px;
@@ -928,7 +963,6 @@ section {
 @media (min-width: 768px) {
   .gift-section .polaroid {
     width: 220px;
-    padding: 15px 15px 40px 15px;
   }
 }
 .gift-section .polaroid img {
@@ -941,9 +975,9 @@ section {
   font-family: "Caveat", cursive;
   font-size: 1.2rem;
   color: #333;
-  margin-top: 12px;
   text-align: center;
   transform: rotate(-2deg);
+  padding-block: 10px;
 }
 .gift-section .polaroid.photo-1 {
   --default-rotation: -8deg;

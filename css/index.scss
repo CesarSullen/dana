@@ -19,6 +19,17 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+
+		.wave-decoration {
+			position: absolute;
+			top: 0;
+			left: 0;
+			max-width: 100%;
+
+			@media screen and (min-width: 512px) {
+				max-width: 62%;
+			}
+		}
 	}
 
 	.hero-visuals {
@@ -32,9 +43,9 @@
 			min-height: 45dvh;
 			height: auto;
 			object-fit: cover;
+			pointer-events: none;
 
-			// This MQ must be at 510px because of the image bg
-			@media screen and (min-width: 510px) {
+			@media screen and (min-width: 512px) {
 				min-height: 90dvh;
 			}
 		}
@@ -52,8 +63,7 @@
 			height: 45dvh;
 			justify-content: space-between;
 
-			// This MQ must be at 510px because of the image bg
-			@media (min-width: 510px) {
+			@media (min-width: 512px) {
 				width: auto;
 				top: 25%;
 				left: 42%;
@@ -318,14 +328,13 @@
 	.polaroid {
 		position: absolute;
 		background: white;
-		padding: 10px 10px 30px 10px;
+		padding: 10px 10px 20px 10px;
 		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 		border: 1px solid rgba(0, 0, 0, 0.04);
 		width: 160px;
 
 		@media (min-width: 768px) {
 			width: 220px;
-			padding: 15px 15px 40px 15px;
 		}
 
 		img {
@@ -339,9 +348,9 @@
 			font-family: "Caveat", cursive;
 			font-size: 1.2rem;
 			color: #333;
-			margin-top: 12px;
 			text-align: center;
 			transform: rotate(-2deg);
+			padding-block: 10px;
 		}
 
 		&.photo-1 {

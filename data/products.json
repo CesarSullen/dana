@@ -3,35 +3,35 @@
 		"id": 1,
 		"name": "Brazalete No. 1",
 		"category": "bracelets",
-		"price": "200.00",
+		"price": "250.00",
 		"img": "./assets/products/bracelet-1.JPG"
 	},
 	{
 		"id": 2,
 		"name": "Brazalete No. 2",
 		"category": "bracelets",
-		"price": "200.00",
+		"price": "250.00",
 		"img": "./assets/products/bracelet-2.JPG"
 	},
 	{
 		"id": 3,
 		"name": "Brazalete No. 3",
 		"category": "bracelets",
-		"price": "200.00",
+		"price": "250.00",
 		"img": "./assets/products/bracelet-3.JPG"
 	},
 	{
 		"id": 4,
 		"name": "Brazalete No. 4",
 		"category": "bracelets",
-		"price": "200.00",
+		"price": "250.00",
 		"img": "./assets/products/bracelet-4.JPG"
 	},
 	{
 		"id": 5,
 		"name": "Brazalete No. 5",
 		"category": "bracelets",
-		"price": "200.00",
+		"price": "250.00",
 		"img": "./assets/products/bracelet-5.JPG"
 	},
 
@@ -117,21 +117,21 @@
 		"id": 17,
 		"name": "Colgante No. 12",
 		"category": "charms",
-		"price": "100.00",
+		"price": "550.00",
 		"img": "./assets/products/charm-multy-1.JPG"
 	},
 	{
 		"id": 18,
 		"name": "Colgante No. 13",
 		"category": "charms",
-		"price": "300.00",
+		"price": "850.00",
 		"img": "./assets/products/charm-multy-2.JPG"
 	},
 	{
 		"id": 19,
 		"name": "Colgante No. 14",
 		"category": "charms",
-		"price": "300.00",
+		"price": "550.00",
 		"img": "./assets/products/charm-multy-3.JPG"
 	},
 
@@ -139,14 +139,14 @@
 		"id": 20,
 		"name": "Colgante No. 15",
 		"category": "charms",
-		"price": "150.00",
+		"price": "120.00",
 		"img": "./assets/products/charm-small-1.JPG"
 	},
 	{
 		"id": 21,
 		"name": "Colgante No. 16",
 		"category": "charms",
-		"price": "150.00",
+		"price": "120.00",
 		"img": "./assets/products/charm-small-2.JPG"
 	},
 
@@ -154,7 +154,7 @@
 		"id": 22,
 		"name": "Gargantilla No. 1",
 		"category": "chokers",
-		"price": "100.00",
+		"price": "200.00",
 		"img": "./assets/products/choker-1.JPG"
 	},
 
@@ -162,14 +162,14 @@
 		"id": 23,
 		"name": "Collar No. 1",
 		"category": "necklaces",
-		"price": "100.00",
+		"price": "150.00",
 		"img": "./assets/products/necklace-1.JPG"
 	},
 	{
 		"id": 24,
 		"name": "Collar No. 2",
 		"category": "necklaces",
-		"price": "100.00",
+		"price": "150.00",
 		"img": "./assets/products/necklace-2.JPG"
 	}
 ]
